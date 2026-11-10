@@ -1,0 +1,34 @@
+PHPUnit Started (PHPUnit 11.5.57 using PHP 8.2.35 (cli) on WINNT)
+Test Runner Configured
+Bootstrap Finished (C:\laragon\www\csirt-depok-v3\vendor/autoload.php)
+Event Facade Sealed
+Test Suite Loaded (2 tests)
+Test Runner Started
+Test Suite Sorted
+Test Suite Filtered (1 test)
+Test Runner Execution Started (1 test)
+Test Suite Started (Tests\Feature\ExampleTest, 1 test)
+Test Preparation Started (Tests\Feature\ExampleTest::test_home_route_is_named_and_accessible)
+Before Test Method Called (Tests\Feature\ExampleTest::setUp)
+Before Test Method Finished:
+- Tests\Feature\ExampleTest::setUp
+Test Prepared (Tests\Feature\ExampleTest::test_home_route_is_named_and_accessible)
+After Test Method Called (Tests\Feature\ExampleTest::tearDown)
+After Test Method Finished:
+- Tests\Feature\ExampleTest::tearDown
+Test Passed (Tests\Feature\ExampleTest::test_home_route_is_named_and_accessible)
+Test Finished (Tests\Feature\ExampleTest::test_home_route_is_named_and_accessible)
+After Last Test Method Called (Tests\Feature\ExampleTest::tearDownAfterClass)
+After Last Test Method Finished:
+- Tests\Feature\ExampleTest::tearDownAfterClass
+Test Suite Finished (Tests\Feature\ExampleTest, 1 test)
+Test Runner Execution Finished
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ home route is named and accessible                                   0.35s  
+
+  Tests:    1 passed (2 assertions)
+  Duration: 0.59s
+
+Test Runner Finished
+PHPUnit Finished (Shell Exit Code: 0)

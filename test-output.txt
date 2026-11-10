@@ -1,0 +1,55 @@
+PHPUnit Started (PHPUnit 11.5.57 using PHP 8.2.35 (cli) on WINNT)
+Test Runner Configured
+Bootstrap Finished (C:\laragon\www\csirt-depok-v3\vendor/autoload.php)
+Event Facade Sealed
+Test Suite Loaded (3 tests)
+Test Runner Started
+Test Suite Sorted
+Test Runner Execution Started (3 tests)
+Test Suite Started (Tests\Feature\IncidentReportAndContentEditorTest, 3 tests)
+Test Preparation Started (Tests\Feature\IncidentReportAndContentEditorTest::test_incident_report_can_be_submitted_and_stored)
+Before Test Method Called (Tests\Feature\IncidentReportAndContentEditorTest::setUp)
+Before Test Method Finished:
+- Tests\Feature\IncidentReportAndContentEditorTest::setUp
+Test Prepared (Tests\Feature\IncidentReportAndContentEditorTest::test_incident_report_can_be_submitted_and_stored)
+After Test Method Called (Tests\Feature\IncidentReportAndContentEditorTest::tearDown)
+After Test Method Finished:
+- Tests\Feature\IncidentReportAndContentEditorTest::tearDown
+Test Passed (Tests\Feature\IncidentReportAndContentEditorTest::test_incident_report_can_be_submitted_and_stored)
+Test Finished (Tests\Feature\IncidentReportAndContentEditorTest::test_incident_report_can_be_submitted_and_stored)
+Test Preparation Started (Tests\Feature\IncidentReportAndContentEditorTest::test_admin_can_view_incident_detail_and_update_status)
+Before Test Method Called (Tests\Feature\IncidentReportAndContentEditorTest::setUp)
+Before Test Method Finished:
+- Tests\Feature\IncidentReportAndContentEditorTest::setUp
+Test Prepared (Tests\Feature\IncidentReportAndContentEditorTest::test_admin_can_view_incident_detail_and_update_status)
+After Test Method Called (Tests\Feature\IncidentReportAndContentEditorTest::tearDown)
+After Test Method Finished:
+- Tests\Feature\IncidentReportAndContentEditorTest::tearDown
+Test Passed (Tests\Feature\IncidentReportAndContentEditorTest::test_admin_can_view_incident_detail_and_update_status)
+Test Finished (Tests\Feature\IncidentReportAndContentEditorTest::test_admin_can_view_incident_detail_and_update_status)
+Test Preparation Started (Tests\Feature\IncidentReportAndContentEditorTest::test_admin_can_update_public_content_settings)
+Before Test Method Called (Tests\Feature\IncidentReportAndContentEditorTest::setUp)
+Before Test Method Finished:
+- Tests\Feature\IncidentReportAndContentEditorTest::setUp
+Test Prepared (Tests\Feature\IncidentReportAndContentEditorTest::test_admin_can_update_public_content_settings)
+After Test Method Called (Tests\Feature\IncidentReportAndContentEditorTest::tearDown)
+After Test Method Finished:
+- Tests\Feature\IncidentReportAndContentEditorTest::tearDown
+Test Passed (Tests\Feature\IncidentReportAndContentEditorTest::test_admin_can_update_public_content_settings)
+Test Finished (Tests\Feature\IncidentReportAndContentEditorTest::test_admin_can_update_public_content_settings)
+After Last Test Method Called (Tests\Feature\IncidentReportAndContentEditorTest::tearDownAfterClass)
+After Last Test Method Finished:
+- Tests\Feature\IncidentReportAndContentEditorTest::tearDownAfterClass
+Test Suite Finished (Tests\Feature\IncidentReportAndContentEditorTest, 3 tests)
+Test Runner Execution Finished
+
+   PASS  Tests\Feature\IncidentReportAndContentEditorTest
+  ✓ incident report can be submitted and stored                         20.36s  
+  ✓ admin can view incident detail and update status                     0.24s  
+  ✓ admin can update public content settings                             0.07s  
+
+  Tests:    3 passed (12 assertions)
+  Duration: 20.88s
+
+Test Runner Finished
+PHPUnit Finished (Shell Exit Code: 0)
