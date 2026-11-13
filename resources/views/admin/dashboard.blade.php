@@ -12,21 +12,42 @@
                 </div>
             </div>
 
-            <ul class="admin-menu">
-                <li><a href="{{ route('admin.dashboard') }}" class="active"><i class='bx bx-grid-alt'></i>Overview</a></li>
-                <li><a href="{{ route('admin.articles.index') }}"><i class='bx bx-news'></i>Artikel</a></li>
-                <li><a href="{{ route('admin.incidents.index') }}"><i class='bx bx-error-circle'></i>Laporan Insiden</a></li>
-                <li><a href="{{ route('admin.site-settings.edit') }}"><i class='bx bx-cog'></i>Halaman Publik</a></li>
-                <li><a href="{{ route('home') }}"><i class='bx bx-arrow-back'></i>Kembali ke Website</a></li>
-                <li>
-                    <form action="{{ route('admin.logout') }}" method="POST">
-                        @csrf
-                        <button type="submit" class="btn btn-link text-white text-decoration-none p-0 m-0 d-flex align-items-center gap-2">
-                            <i class='bx bx-log-out'></i>Keluar
-                        </button>
-                    </form>
-                </li>
-            </ul>
+            <nav aria-label="Navigasi admin">
+                <ul class="admin-menu">
+                    <li><a href="{{ route('admin.dashboard') }}" class="{{ request()->is('admin/dashboard') ? 'active' : '' }}"><i class='bx bx-grid-alt'></i>Dashboard</a></li>
+                    <li><a href="{{ route('admin.incidents.index') }}"><i class='bx bx-error-circle'></i>Incident</a></li>
+                    <li><a href="{{ url('/admin/vulnerabilities') }}"><i class='bx bx-bug'></i>Vulnerability</a></li>
+                    <li><a href="{{ url('/admin/assets') }}"><i class='bx bx-server'></i>Asset Registry</a></li>
+                    <li><a href="{{ url('/admin/audits') }}"><i class='bx bx-clipboard'></i>Audit dan Assessment</a></li>
+                    <li><a href="{{ url('/admin/evidence') }}"><i class='bx bx-file'></i>Evidence</a></li>
+                    <li><a href="{{ url('/admin/validation/jobs') }}"><i class='bx bx-check-shield'></i>Security Validation Center</a></li>
+
+                    <li class="admin-menu-section">Konten (CMS)</li>
+                    <li class="admin-menu-subitem"><a href="{{ url('/admin/content/menus') }}"><i class='bx bx-menu'></i>Menu</a></li>
+                    <li class="admin-menu-subitem"><a href="{{ url('/admin/content/pages') }}"><i class='bx bx-file-blank'></i>Halaman</a></li>
+                    <li class="admin-menu-subitem"><a href="{{ route('admin.articles.index') }}"><i class='bx bx-news'></i>Artikel</a></li>
+                    <li class="admin-menu-subitem"><a href="{{ url('/admin/content/categories-tags') }}"><i class='bx bx-purchase-tag'></i>Kategori dan Tag</a></li>
+                    <li class="admin-menu-subitem"><a href="{{ url('/admin/content/media') }}"><i class='bx bx-images'></i>Media</a></li>
+                    <li><a href="{{ url('/admin/public-authors') }}"><i class='bx bx-user-voice'></i>Public Authors</a></li>
+                    <li><a href="{{ url('/admin/official-documents') }}"><i class='bx bx-folder-open'></i>Dokumen Resmi</a></li>
+
+                    <li class="admin-menu-section">Administrasi</li>
+                    <li class="admin-menu-subitem"><a href="{{ url('/admin/users') }}"><i class='bx bx-user'></i>Pengguna</a></li>
+                    <li class="admin-menu-subitem"><a href="{{ url('/admin/roles-permissions') }}"><i class='bx bx-key'></i>Role dan Permission</a></li>
+                    <li class="admin-menu-subitem"><a href="{{ route('admin.site-settings.edit') }}"><i class='bx bx-cog'></i>Konfigurasi</a></li>
+                    <li class="admin-menu-subitem"><a href="{{ url('/admin/reference-templates') }}"><i class='bx bx-book-content'></i>Template Referensi</a></li>
+                    <li class="admin-menu-subitem"><a href="{{ url('/admin/audit-logs') }}"><i class='bx bx-history'></i>Audit Log</a></li>
+                    <li class="admin-menu-utility"><a href="{{ route('home') }}"><i class='bx bx-arrow-back'></i>Kembali ke Website</a></li>
+                    <li>
+                        <form action="{{ route('admin.logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-link text-white text-decoration-none p-0 m-0 d-flex align-items-center gap-2">
+                                <i class='bx bx-log-out'></i>Keluar
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
         </aside>
 
         <main class="admin-main">
@@ -259,6 +280,27 @@
 </div>
 
 <style>
+    .admin-menu-section {
+        color: rgba(79, 227, 255, 0.8);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        margin: 0.8rem 0 0.1rem;
+        padding: 0.3rem 0.9rem;
+        text-transform: uppercase;
+    }
+
+    .admin-menu-subitem a {
+        padding-left: 1.4rem;
+        font-size: 0.9rem;
+    }
+
+    .admin-menu-utility {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 0.5rem;
+        padding-top: 0.7rem;
+    }
+
     .dashboard-filter-panel {
         background: rgba(9, 18, 33, 0.88);
         border: 1px solid rgba(148, 163, 184, 0.18);
